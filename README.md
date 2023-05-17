@@ -22,7 +22,7 @@ This translation tool provides methods for translation and back-translation in m
 from translator import MarianMTModelTranslator
 
 # Translation task: translate from Chinese to English
-translator = MarianMTModelTranslator(type='translate', origin_code='zh', target_code='en', device_name='cuda:1', batch_size=20)
+translator = MarianMTModelTranslator(type='translate', origin_code='zh', target_code='en', device_name='cuda:1', batch_size=20)#device_name='cpu' use cpu device to translate
 output_texts = translator.translate(['今天中午吃什么', '你明天要去哪里玩', '苦海无涯回头是岸'])
 print(output_texts)
 
@@ -61,7 +61,7 @@ print(output_texts)
 from translator import MarianMTModelTranslator
 
 #翻译任务，从中文翻译到英文
-translator=MarianMTModelTranslator(type='translate',origin_code='zh',target_code='en'，device_name='cuda:1',batch_size=20)
+translator=MarianMTModelTranslator(type='translate',origin_code='zh',target_code='en'，device_name='cuda:1',batch_size=20)#device_name='cpu' 使用cpu推理计算
 output_texts=translator.translate(['今天中午吃什么','你明天要去哪里玩','苦海无涯回头是岸'])
 print(output_texts)
 
